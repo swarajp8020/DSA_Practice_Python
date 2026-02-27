@@ -1,4 +1,4 @@
-from collections import deque  # deque provides O(1) FIFO operations, internally uses doubly linked list blocks
+from collections import deque  
 
 class Solution:
     def shortestPathBinaryMatrix(self, grid):
