@@ -1,6 +1,6 @@
 from collections import Counter
 
-def leastInterval(tasks, n):
+def least_interval(tasks, n):
     task_counts = Counter(tasks)
     max_frequency = max(task_counts.values())
     count_max_frequency = sum(
@@ -14,4 +14,4 @@ def leastInterval(tasks, n):
 if __name__ == "__main__":
     tasks = ["A","A","A", "B","B","B"]
     n = 3
-    print(leastInterval(tasks, n))
+    print(least_interval(tasks, n))
