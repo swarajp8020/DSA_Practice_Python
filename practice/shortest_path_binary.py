@@ -1,8 +1,7 @@
 from collections import deque
 
-def shortestPathBinaryMatrix(grid):
+def shortest_path_binary_matrix(grid):
     n = len(grid)
-
     if n == 0:
         return -1
     
