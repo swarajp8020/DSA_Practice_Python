@@ -32,4 +32,4 @@ def shortest_path_binary_matrix(grid):
 
 if __name__ == "__main__":
     grid = [[1,0,0],[1,1,0],[1,1,0]]
-    print(shortestPathBinaryMatrix(grid))
+    print(shortest_path_binary_matrix(grid))
