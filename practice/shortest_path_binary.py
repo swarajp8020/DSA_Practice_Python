@@ -1,6 +1,6 @@
 from collections import deque
 
-def shortestPathBinaryMatrix(grid):
+def shortest_path_binary_matrix(grid):
     n = len(grid)
 
     if n == 0:
@@ -32,5 +32,5 @@ def shortestPathBinaryMatrix(grid):
     return -1
 
 if __name__ == "__main__":
-    grid = [[1,0,0],[1,1,0],[1,1,0]]
-    print(shortestPathBinaryMatrix(grid))
+    grid = [[0,0,0],[1,1,0],[1,1,0]]
+    print(shortest_path_binary_matrix(grid))
