@@ -99,3 +99,49 @@ def burn_tree(root, target_value):
                 queue.append(parent_map[current_node])
 
         print(current_level)
+def build_tree_from_list(elements):
+    """Helper to build a tree from a level-order list (LeetCode style)."""
+    if not elements:
+        return None
+    
+    root = Node(elements[0])
+    queue = deque([root])
+    i = 1
+    while queue and i < len(elements):
+        current = queue.popleft()
+        
+        # Left child
+        if i < len(elements) and elements[i] is not None:
+            current.left = Node(elements[i])
+            queue.append(current.left)
+        i += 1
+        
+        # Right child
+        if i < len(elements) and elements[i] is not None:
+            current.right = Node(elements[i])
+            queue.append(current.right)
+        i += 1
+    return root
+
+if __name__ == "__main__":
+    # Input: root = [1, 5, 3, null, 4, 10, 6, 9, 2], start = 3
+    # The tree structure:
+    #          1
+    #        /   \
+    #       5     3 <--- Fire starts here
+    #        \   / \
+    #         4 10  6
+    #        / \
+    #       9   2
+    
+    tree_data = [1, 5, 3, None, 4, 10, 6, 9, 2]
+    start_node_val = 3
+    
+    # 1. Build the tree
+    root_node = build_tree_from_list(tree_data)
+    
+    print(f"Burning tree starting from node {start_node_val}:")
+    
+    # 2. Execute the burn_tree function
+    # Note: Your function prints the levels directly.
+    burn_tree(root_node, start_node_val)
