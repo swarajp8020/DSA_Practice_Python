@@ -17,7 +17,6 @@ def find_minimum_eating_speed(pile_sizes, available_hours):
         if hours_needed <= available_hours:
             optimal_speed = candidate_speed
             maximum_speed = candidate_speed - 1
-
         else:
             minimum_speed = candidate_speed + 1
     return optimal_speed
