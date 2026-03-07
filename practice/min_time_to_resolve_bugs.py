@@ -3,6 +3,7 @@ def min_time_to_resolve_bugs(timeTaken, bugs):
     low = 1
     high = bugs * min_time
     answer = high
+    
     while low <= high:
         mid = low + (high - low)// 2
         total_bugs_resolved = 0
