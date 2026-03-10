@@ -2,13 +2,10 @@ from collections import deque
 
 def shortest_path_binary_matrix(grid):
     n = len(grid)
-
     if n == 0:
         return -1
-    
     if grid[0][0] != 0 or grid[n-1][n-1] != 0:
         return -1
-    
     directions = [
         (-1,-1),(-1,0),(-1,1),
         (0,-1),       (0,1),
