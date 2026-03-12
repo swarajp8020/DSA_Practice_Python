@@ -16,6 +16,7 @@ class Solution:
                 backtrack(i + 1, remaining - candidates[i])
         backtrack(0, target)
         return result
+    
 if __name__ == "__main__":
     sol = Solution()
     candidates = [10,1,2,7,6,1,5]
